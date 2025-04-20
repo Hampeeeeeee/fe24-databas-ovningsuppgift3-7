@@ -1,8 +1,8 @@
-{
+
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\nCREATE DATABASE Pokemon;\nDROP DATABASE Pokemon;\nCREATE DATABASE PokemonDatabase;\nCREATE TABLE Pokemon;\nUSE Pokemon;\nUSE PokemonDatabase;\nCREATE TABLE Pokemon (\n    id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,\n    name VARCHAR(200) NOT NULL,\n    height DECIMAL(5,2),\n    weight DECIMAL(5,2)\n);\nDROP TABLE Pokemon;\nCREATE TABLE Pokemon (\n    id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,\n    name VARCHAR(200) NOT NULL,\n    height DECIMAL(5,2),\n    weight DECIMAL(5,2)\n);\nCREATE TABLE Users (\n    id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,\n    email VARCHAR(200) NOT NULL,\n    name VARCHAR(200) NOT NULL,\n    password VARCHAR(200) NOT NULL,\n    lastLogin DATETIME,\n    created DATETIME,\n    newsletter ENUM('yes', 'no')\n);\nINSERT INTO Pokemon (name, height, weight) VALUES \n('Pikachu', '0.4', '6.0');\nSELECT * FROM Pokemon;\nINSERT INTO Pokemon (name, height, weight) VALUES \n('Geodude', '0.4', '20'),\n('Alakazam', '1.5', '48');\nINSERT INTO Users (email, name, password, lastLogin, created, newsletter) VALUES \n('hampus.svensson@gritacademy.se', 'Hampus', 'passwordhs', NULL, CURRENT_TIMESTAMP(), 'Yes');\nSELECT * FROM Users;\nINSERT INTO Users (email, name, password, lastLogin, created, newsletter) VALUES \n('skrollan.svensson@gritacademy.se', 'Skrollan', 'passwordss', NULL, CURRENT_TIMESTAMP(), 'Yes'),\n('beppe.svensson@gritacademy.se', 'Beppe', 'passwordbs', NULL, CURRENT_TIMESTAMP(), 'no');\n",
+    "content": "\\about\nCREATE DATABASE Pokemon;\nDROP DATABASE Pokemon;\nCREATE DATABASE PokemonDatabase;\nCREATE TABLE Pokemon;\nUSE Pokemon;\nUSE PokemonDatabase;\nCREATE TABLE Pokemon (\n    id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,\n    name VARCHAR(200) NOT NULL,\n    height DECIMAL(5,2),\n    weight DECIMAL(5,2)\n);\nDROP TABLE Pokemon;\nCREATE TABLE Pokemon (\n    id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,\n    name VARCHAR(200) NOT NULL,\n    height DECIMAL(5,2),\n    weight DECIMAL(5,2)\n);\nCREATE TABLE Users (\n    id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,\n    email VARCHAR(200) NOT NULL,\n    name VARCHAR(200) NOT NULL,\n    password VARCHAR(200) NOT NULL,\n    lastLogin DATETIME,\n    created DATETIME,\n    newsletter ENUM('yes', 'no')\n);\nINSERT INTO Pokemon (name, height, weight) VALUES \n('Pikachu', '0.4', '6.0');\nSELECT * FROM Pokemon;\nINSERT INTO Pokemon (name, height, weight) VALUES \n('Geodude', '0.4', '20'),\n('Alakazam', '1.5', '48');\nINSERT INTO Users (email, name, password, lastLogin, created, newsletter) VALUES \n('hampus.svensson@gritacademy.se', 'Hampus', 'passwordhs', NULL, CURRENT_TIMESTAMP(), 'Yes');\nSELECT * FROM Users;\nINSERT INTO Users (email, name, password, lastLogin, created, newsletter) VALUES \n('skrollan.svensson@gritacademy.se', 'Skrollan', 'passwordss', NULL, CURRENT_TIMESTAMP(), 'Yes'),\n('beppe.svensson@gritacademy.se', 'Beppe', 'passwordbs', NULL, CURRENT_TIMESTAMP(), 'no');\nSELECT * FROM USERS;\nUSE PokemonDatabase;\nSELECT * FROM Users;\nSELECT COUNT(id) FROM Users;\n",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -15,22 +15,22 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 41,
-                    "column": 91
+                    "lineNumber": 46,
+                    "column": 1
                 },
                 "position": {
-                    "lineNumber": 41,
-                    "column": 91
+                    "lineNumber": 46,
+                    "column": 1
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 34,
+                "lineNumber": 15,
                 "column": 1
             },
-            "firstPositionDeltaTop": -23
+            "firstPositionDeltaTop": 49
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -438,7 +438,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "874aa9e4-56fe-44e3-cbe9-009a6d9e019a"
+                        "c4d0ba0f-7052-4c13-ab6d-45fd0ee01743"
                     ]
                 },
                 "currentHeight": 141,
@@ -457,8 +457,8 @@
             },
             "data": [
                 {
-                    "tabId": "da99f218-9ced-4d7a-bf57-407bef81b736",
-                    "resultId": "874aa9e4-56fe-44e3-cbe9-009a6d9e019a",
+                    "tabId": "2afe52ac-3285-4e33-ab9e-ef7c3ba30293",
+                    "resultId": "c4d0ba0f-7052-4c13-ab6d-45fd0ee01743",
                     "rows": [
                         {
                             "0": 1,
@@ -650,7 +650,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "e90cb416-4b2b-4b7a-dbbb-257fe4082a2b"
+                        "b800654b-ac1e-439d-b9ff-6f0fd271dbce"
                     ]
                 },
                 "currentHeight": 157.65625,
@@ -669,8 +669,8 @@
             },
             "data": [
                 {
-                    "tabId": "da99f218-9ced-4d7a-bf57-407bef81b736",
-                    "resultId": "e90cb416-4b2b-4b7a-dbbb-257fe4082a2b",
+                    "tabId": "2afe52ac-3285-4e33-ab9e-ef7c3ba30293",
+                    "resultId": "b800654b-ac1e-439d-b9ff-6f0fd271dbce",
                     "rows": [
                         {
                             "0": 1,
@@ -865,6 +865,338 @@
             "state": {
                 "start": 42,
                 "end": 42,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 0,
+                            "index": 0,
+                            "content": "MySQL Error (1046): No database selected",
+                            "language": "ansi"
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": ""
+                    }
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 20
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 20,
+                            "length": 0
+                        },
+                        "contentStart": 19,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 43,
+                "end": 43,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "952af7bc-e910-4d47-8abd-316ee4a93658",
+                            "content": "OK, 0 records retrieved in 1.573ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 20
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 44,
+                "end": 44,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "174412f0-1d8e-4be7-8e9d-631b6c2ac7d4"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 20
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "2afe52ac-3285-4e33-ab9e-ef7c3ba30293",
+                    "resultId": "174412f0-1d8e-4be7-8e9d-631b6c2ac7d4",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "hampus.svensson@gritacademy.se",
+                            "2": "Hampus",
+                            "3": "passwordhs",
+                            "4": null,
+                            "5": "2025-04-16 12:36:47",
+                            "6": "yes"
+                        },
+                        {
+                            "0": 2,
+                            "1": "skrollan.svensson@gritacademy.se",
+                            "2": "Skrollan",
+                            "3": "passwordss",
+                            "4": null,
+                            "5": "2025-04-16 12:39:34",
+                            "6": "yes"
+                        },
+                        {
+                            "0": 3,
+                            "1": "beppe.svensson@gritacademy.se",
+                            "2": "Beppe",
+                            "3": "passwordbs",
+                            "4": null,
+                            "5": "2025-04-16 12:39:34",
+                            "6": "no"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 5,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 20,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INT8",
+                                    "SERIAL"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": true
+                        },
+                        {
+                            "title": "email",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "name",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "password",
+                            "field": "3",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "lastLogin",
+                            "field": "4",
+                            "dataType": {
+                                "type": 26,
+                                "dateTimePrecision": 8,
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "created",
+                            "field": "5",
+                            "dataType": {
+                                "type": 26,
+                                "dateTimePrecision": 8,
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "newsletter",
+                            "field": "6",
+                            "dataType": {
+                                "type": 43,
+                                "needsQuotes": true
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 3 records retrieved in 9.228ms"
+                    },
+                    "totalRowCount": 3,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM Users",
+                    "updatable": true,
+                    "fullTableName": "Users"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 45,
+                "end": 45,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "9b383a31-98fb-48d7-f258-8eb4e124c750"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 28
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "2afe52ac-3285-4e33-ab9e-ef7c3ba30293",
+                    "resultId": "9b383a31-98fb-48d7-f258-8eb4e124c750",
+                    "rows": [
+                        {
+                            "0": 3
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "COUNT(id)",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 2.785ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT COUNT(id) FROM Users",
+                    "updatable": false,
+                    "fullTableName": ""
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 46,
+                "end": 46,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [

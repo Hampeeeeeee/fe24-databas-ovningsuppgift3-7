@@ -1,0 +1,26 @@
+{
+  "name": "fe24-databas-ovningsuppgift3-7",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon PokemonDatabase/src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hampeeeeeee/fe24-databas-ovningsuppgift3-7.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hampeeeeeee/fe24-databas-ovningsuppgift3-7/issues"
+  },
+  "homepage": "https://github.com/Hampeeeeeee/fe24-databas-ovningsuppgift3-7#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.0"
+  }
+}
