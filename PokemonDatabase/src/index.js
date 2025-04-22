@@ -130,8 +130,10 @@ app.get('/Pokemon/minHeight', async (req, res) =>{
 
 app.get('/Users/sort', async (req, res) => {
 
+    const order = req.query.order?.toUpperCase() === 'ASC' ? 'ASC' : 'DESC';
+
     try {
-        const sql = 'SELECT * FROM Users ORDER BY created DESC';
+        const sql = `SELECT * FROM Users ORDER BY created ${order}`;
         const [ rows ] = await pool.query(sql);
         res.json(rows);
     }
@@ -140,6 +142,67 @@ app.get('/Users/sort', async (req, res) => {
         res.status(500).json({ message: 'Database error' });
     }
 
+});
+
+app.get('/Pokemon/lastOnline', async (req, res) => {
+
+    try {
+        // Hämtar den senast inloggade användaren
+        const [userRows] = await pool.query('SELECT id FROM Users ORDER BY lastLogin DESC LIMIT 1');
+        if (userRows.length === 0) {
+            return res.status(404).json({ message: 'No users found' });
+        }
+
+        // Hämtar ID't på den senaste inloggade användaren
+        const userId = userRows[0].id;
+
+        // Hämtar pokemons från användaren som har varit inloggad senast
+        const [pokemonRows] = await pool.query(`
+            SELECT p.name
+            FROM Pokemon p
+            JOIN UserPokemons up ON p.id = up.pokemonId
+            WHERE up.userId = ?
+        `, [userId]);
+
+        res.json(pokemonRows);
+    }
+    catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Database error' });
+    }
+});
+
+app.put('/Pokemon/update/:id', async (req, res) => {
+    try {
+        // Hämtar pokemon ID från parametern
+        const pokemonId = req.params.id;
+
+        // Hämtar den nya egenskapen från body
+        const { name } = req.body;
+
+        // Kontroll att ett namn har skickats med
+        if (!name) {
+            return res.status(400).json({ message: 'Name is required' });
+        }
+
+        // Fråga för att uppdatera pokemon
+        const [result] = await pool.query(`
+            UPDATE Pokemon
+            SET name = ?
+            WHERE id = ?
+        `, [name, pokemonId]);
+
+        // Ifall att inga rader uppdaterades
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ message: 'Pokemon not found' });
+        }
+
+        // Errorhantering
+        res.json({ message: 'Pokemon updated successfully' });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Database error' });
+    }
 });
 
 
