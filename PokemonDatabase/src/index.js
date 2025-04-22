@@ -205,6 +205,24 @@ app.put('/Pokemon/update/:id', async (req, res) => {
     }
 });
 
+app.put('/Pokemon/updateWeight', async (req, res) => {
+
+    try {
+        const [result] = await pool.query(
+            `UPDATE Pokemon
+            SET weight = weight - 2`
+        );
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ message: 'No pokemon to update!' });
+        }
+
+        res.json({ message: 'Weights have been updated successfully!' });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ message: 'Database error' });
+    }
+})
 
 app.listen(PORT, () => {
     console.log('Server running at http://localhost:'+PORT);
