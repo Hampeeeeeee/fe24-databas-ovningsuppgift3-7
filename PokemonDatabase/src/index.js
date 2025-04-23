@@ -208,15 +208,18 @@ app.put('/Pokemon/update/:id', async (req, res) => {
 app.put('/Pokemon/updateWeight', async (req, res) => {
 
     try {
+        // Uppdaterar alla pokemons vikt till "weight = ?"
         const [result] = await pool.query(
             `UPDATE Pokemon
             SET weight = weight - 2`
         );
 
+        // Checkar om det finns en pokemon att uppdatera
         if (result.affectedRows === 0) {
             return res.status(404).json({ message: 'No pokemon to update!' });
         }
 
+        // Errorhantering
         res.json({ message: 'Weights have been updated successfully!' });
     } catch (err) {
         console.log(err);
